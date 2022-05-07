@@ -572,9 +572,13 @@ jQuery("#click-menu").on("click", function (t) {
                 });
             });
             var imagelz1 = 0;
+            var imagelz2 = 0;
             $(window).scroll(function () {
                 if (imagelz1 == 0 && $(".image-lz-1").length) {
                     $('.image-lz-1').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651911982/spa/images/image1_or7gx1.png')");
+                }
+                if (imagelz2 == 0 && $(".image-lz-2").length) {
+                    $('.image-lz-2').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651912562/spa/images/image2_xxaunv.png')");
                 }
             });
         }),
