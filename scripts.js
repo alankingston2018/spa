@@ -571,18 +571,39 @@ jQuery("#click-menu").on("click", function (t) {
                     }
                 });
             });
+            var distanceBefore = 100;
             var imagelz1 = 0;
             var imagelz2 = 0;
             var imagelz3 = 0;
+            var imagelz4 = 0;
             $(window).scroll(function () {
                 if (imagelz1 == 0 && $(".image-lz-1").length) {
-                    $('.image-lz-1').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651911982/spa/images/image1_or7gx1.png')");
+                    var imagelz1Top = $('.image-lz-1').offset().top - window.innerHeight;
+                    if ($(window).scrollTop() > (imagelz1Top - distanceBefore)) {
+                        $('.image-lz-1').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651911982/spa/images/image1_or7gx1.png')");
+                        imagelz1 = 1;
+                    }
                 }
                 if (imagelz2 == 0 && $(".image-lz-2").length) {
-                    $('.image-lz-2').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651912562/spa/images/image2_xxaunv.png')");
+                    var imagelz2Top = $('.image-lz-2').offset().top - window.innerHeight;
+                    if ($(window).scrollTop() > (imagelz2Top - distanceBefore)) {
+                        $('.image-lz-2').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651912562/spa/images/image2_xxaunv.png')");
+                        imagelz2 = 1;
+                    }
                 }
                 if (imagelz3 == 0 && $(".image-lz-3").length) {
-                    $('.image-lz-3').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651913478/spa/images/image3_paeejf.png')");
+                    var imagelz3Top = $('.image-lz-3').offset().top - window.innerHeight;
+                    if ($(window).scrollTop() > (imagelz3Top - distanceBefore)) {
+                        $('.image-lz-3').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651913478/spa/images/image3_paeejf.png')");
+                        imagelz3 = 1;
+                    }
+                }
+                if (imagelz4 == 0 && $(".image-lz-4").length) {
+                    var imagelz4Top = $('.image-lz-4').offset().top - window.innerHeight;
+                    if ($(window).scrollTop() > (imagelz4Top - distanceBefore)) {
+                        $('.image-lz-3').css("background-image", "url('https://res.cloudinary.com/dtphd39ig/image/upload/v1651913478/spa/images/image3_paeejf.png')");
+                        imagelz4 = 1;
+                    }
                 }
             });
         }),
